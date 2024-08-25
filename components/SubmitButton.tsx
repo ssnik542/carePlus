@@ -6,8 +6,6 @@ interface ButtonProps {
   isLoading?: boolean;
   className?: string;
   children: React.ReactNode;
-  type?: string;
-  onClick?: () => void;
 }
 
 const SubmitButton = ({ isLoading, className, children }: ButtonProps) => {

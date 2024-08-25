@@ -9,15 +9,6 @@ export const UserFormValidation = z.object({
   phone: z
     .string()
     .refine((phone) => /^\+\d{12}$/.test(phone), "Invalid phone number"),
-  password: z
-    .string()
-    .refine(
-      (pass) =>
-        /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/.test(
-          pass
-        ),
-      "Minimum eight characters, at least one letter, one number and one special character is Required"
-    ),
 });
 
 export const UserLoginFormValidation = z.object({
